@@ -1,0 +1,23 @@
+{
+  "name": "weather-api-project",
+  "version": "1.0.0",
+  "description": "Api Practice",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SenpaiBlinky/Weather-Api-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SenpaiBlinky/Weather-Api-Project/issues"
+  },
+  "homepage": "https://github.com/SenpaiBlinky/Weather-Api-Project#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "request": "^2.88.2"
+  }
+}
