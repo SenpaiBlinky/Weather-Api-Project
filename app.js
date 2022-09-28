@@ -5,8 +5,13 @@ const https = require("https")
 // uses express to connect with any requests
 const app = express();
 
+const apiKey = "269fe1ca83aa111b34b2e69d26ed3aff"
+
+const unit = "imperial"
+
+const query = "Illinois"
 // we must include https
-const url = "https://api.openweathermap.org/data/2.5/weather?q=Illinois&appid=269fe1ca83aa111b34b2e69d26ed3aff&units=metric";
+const url = "https://api.openweathermap.org/data/2.5/weather?q=" + query + "&appid=" + apiKey + "&units=" + unit;
 
 // whenever a user goes to the page we send back a request
 app.get("/", function (req, res) {
@@ -29,7 +34,7 @@ app.get("/", function (req, res) {
 
         //  !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! BRILLIANT !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
          res.write("<p>The weather is currently " + weatherDescription + "</p>")
-         res.write("<h1>The temperature in Illinois is " + temp + " degrees Celcius</h1>") 
+         res.write("<h1>The temperature in Illinois is " + temp + " degrees.</h1>") 
          res.write("<img src="+iconLink+">")
         //  kind of like a return
          res.send();
